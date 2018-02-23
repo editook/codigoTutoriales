@@ -1,5 +1,5 @@
 <!doctype html>
-<!--plantilla principal con  el que inicia la pagina-->
+<!--plantilla principal con  el que inicia la pagina siempre motor de plantilla blade, sinfoni es para otro-->
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
@@ -37,6 +37,11 @@
 		    </div>
 		  </div>
 		</nav>
-        @yield('contenido')
+		<!--parte de la vista del contenido no relevante-->
+		<div class="jumbotron text-center">
+			@yield('contenido')
+			@yield('otros')
+		</div>
+        
     </body>
 </html>

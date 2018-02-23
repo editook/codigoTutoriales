@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 class frontEndController extends Controller{
     //devuelve la vista que esta en views/web/ el archivo index
     public function InicioHome(){
-    	return view('web.index');//vista principal
+        //creando listado (proveniente de la base)
+        $lista=['algebra','quimica','matematicas','informatica'];
+        $titulo='este es el titulo';
+    	return view('web.index',['listado'=>$lista,'titulo'=>$titulo]);//vista llevando datos
     }
     //seccion introducion a la programacion
     public function introProgra(){
-    	return "vacio";//correjir
+    	return view('web.introProgra',['nombre'=>'eduardo']);//correjir
     }
 
     public function CapituloIntroProgra($capitulo){
